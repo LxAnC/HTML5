@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let oil=parseInt(prompt('请输入汽油编号'));
+        let ml=parseInt(prompt('请输入你要加多少升'));
+        let money,a=6,b=7;   //定义总金额变量，92和97的汽油单价
+        if(oil==92){        //判断若是92号汽油
+           if(ml>=20)
+            a-=0.1;         //打折
+            money=ml*a;
+            document.write('汽油'+a+'元一升;<br/>');
+            document.write('共计:'+money+'元');
+        }
+        else if(oil==97){    //判断若是97号汽油
+           if(ml>=40)
+            b-=0.5;         //打折
+            money=ml*b;
+            document.write('汽油'+b+'元一升;<br/>');
+            document.write('共计:'+money+'元');
+        }
+        else
+            ;  //防止输入其他的汽油编号
+        </script>
+</body>
+</html>

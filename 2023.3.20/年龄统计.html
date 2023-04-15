@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=[],cn=[],s=0
+        let avg,max,min
+        let j=0
+        for(let i=0;i<5;i++)
+        {age[i]=+prompt("请输入有效年龄")
+        while(age[i]<0||age[i]>=132)
+          age[i]=+prompt("请输入有效年龄，重新输入")}
+        max=min=age[0]
+          for(i=0;i<5;i++){
+            if(age[i]>=18)
+              {cn[j]=age[i]
+              j++}
+            if(max<age[i])
+              max=age[i]
+            if(min>age[i])
+              min=age[i]
+            s+=age[i]
+        }
+        document.write(`所有成年人的年龄：<br>`)
+        for(i=0;i<=cn.length-1;i++)
+        document.write(cn[i]+' ')
+        document.write(`<br>所有人的总年龄是：${s}<br>`)
+        document.write(`所有人的平均年龄是：${s/5}<br>`)
+        document.write(`最大年龄是：${max}<br>最小年龄是：${min}`)
+
+    </script>
+</body>
+</html>

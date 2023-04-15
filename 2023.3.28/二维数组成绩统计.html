@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stu=[[88,70,75,60,60],[66,46,63,60,80],[100,80,95,98,90]]
+        let i,j,k,s
+        for(i=0;i<3;i++)
+        {
+            s=0
+            for(j=0;j<5;j++)
+            s+=stu[i][j]
+            k=s/5
+            document.write(`${s}是总成绩,${k}是平均成绩<br>`)
+        }
+   </script>
+</body>
+</html>

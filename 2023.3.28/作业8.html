@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [89, 78, 37, 110, 56, 100, 21, 87, 77, 151, 25, 80];
+        let i, j, num;
+        for (i = 0; i < arr.length - 1; i++) {
+            for (j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    num = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = num;
+                }
+            }
+        }
+        console.log("这是冒泡排序法：" + arr);
+        for (i = 0; i < arr.length; i++) {
+            let min = i;
+            for (j = i; j < arr.length; j++) {
+                if (arr[j] < arr[min])
+                    min = j;
+            }
+            let t = arr[min];
+            arr[min] = arr[i];
+            arr[i] = t;
+        }
+        console.log("这是选择排序法:" + arr);
+        for (i = 1; i < arr.length; i++) {
+            let t = arr[i];
+            j = i - 1;
+            while (j >= 0 && arr[j] > t) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = t;
+        }
+        console.log("这是插入排序法：" + arr);
+    </script>
+
+</body>
+
+</html>

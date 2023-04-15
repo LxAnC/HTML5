@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i=0,n,m,j=0,p=0
+        let monkey=[]
+        n=prompt("请输入有多少只猴子")
+        m=prompt("请输入踢出第几只猴子")
+        for(i=0;i<n;i++)
+            monkey[i]=i+1             //给猴子们标号
+        for(i=0;i<=n;i++){
+            if(i==n)                  //数到最后一只猴子再数回来
+                i=0
+            if(typeof(monkey[i])!='undefined')   //判断该号猴子是否被踢出
+                j++;
+            if(j==m)             //数到m时
+            {
+                delete monkey[i]     //踢出这只猴子
+                j=0                  //重新计数
+                p++}                 //踢去的猴子加一
+            if(p==n-1)     //直到只剩最后一只猴子时跳出循环
+                break;
+        }
+        document.write("猴子大王是")
+        for(i=0;i<n;i++)
+        if(typeof(monkey[i])!="undefined")
+          document.write(monkey[i])
+          
+    </script>
+</body>
+</html>

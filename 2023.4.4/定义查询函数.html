@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,s=['苹果', '香蕉', '橘子', '荔枝', '梨子']
+        i='香蕉'
+        function findeIndex(i,s){
+            let b=-1
+            let pos
+            for(let j=0;j<s.length;j++)
+             if(i==s[j]){
+                b=1
+                pos=j
+             }
+              if(b==1)
+              console.log(`找到了，位置是${pos}`)
+              else
+              console.log(-1)
+              return 0    
+        } 
+        findeIndex(i,s)
+        </script>
+</body>
+</html>

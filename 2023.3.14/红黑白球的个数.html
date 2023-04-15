@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求红白黑球的个数</title>
+</head>
+<body>
+    <script>
+        let r,b,w;
+        for(r=1;r<25;r++)
+          for(b=1;b<31;b++)
+            for(w=1;w<25;w++)
+              if(r+w==25&&w+b==31&&r+b==28){
+                document.write(`此网页显示<br\><br\>红球:${r}<br\>白球:${w}<br\>黑球:${b}`);
+                r=100;
+              }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,s;
+        function sum(num1,num2){
+            let s=0
+            while(num1<=num2){
+                s+=num1
+                num1+=1
+            }
+            return s
+        }
+        i=+prompt("输入最小数字:")
+        s=+prompt("输入最大数字:")
+        alert(`${i}到${s}之间所有数的和是${sum(i,s)}`)
+    </script>
+</body>
+</html>

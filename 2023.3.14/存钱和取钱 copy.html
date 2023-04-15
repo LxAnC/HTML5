@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s=100;
+        let a=0,b=1;
+        let username=prompt('请输入用户名(若无账号请输入"注册"进行注册")');
+        if(username=='lxc svip'){
+          let password=+prompt('请输入SVIP用户的密码：');
+          if(password==666){
+            alert("SVIP至尊权限获取成功");
+            boo=true;
+          }
+          else{
+            alert("SVIP至尊权限获取失败，即将进入普通用户界面……");
+            boo=false;
+          }
+        }
+        else if(username=="注册"){
+            quest=+prompt("创建您的用户名");
+            quest=+prompt("创建您的密码(至少8位)");
+            boo=true;
+        }
+        while(boo){    
+        let b=+prompt("请输入你要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出\n5.秘密菜单");
+        if(b==1){        
+            a=+prompt('请输入您要存入的金额');
+            alert(`您的余额是：${s+=a}元`);
+        }
+        else if(b==2){
+            a=-prompt('请输入您要取出的金额');
+            alert(`您的余额是：${s+=a}元`);
+        }
+        else if(b==3)
+            alert(`您的余额是：${s}元`);
+        else if(b==4)
+             break;
+        else if(b==5001363){
+             alert("即将进入内部系统……")
+        }
+    }
+    
+        
+        
+    
+        
+    </script>
+</body>
+</html>
