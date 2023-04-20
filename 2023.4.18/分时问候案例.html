@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="1.jpeg" alt="" id="pic">
+    <div id="text"></div>
+    <script>
+        let d="";
+        let div = document.getElementById('text');
+        let b = document.getElementById('pic');
+        let hour = new Date().getHours();
+        if (hour >= 0 && hour < 8) {	//判断是否为早上
+            d = "早上好";
+            b.src="1.jpeg";
+        }
+        if (hour >= 8 && hour < 11) {	//判断是否为上午
+            d = "上午好";
+            b.src="2.jpg";
+        }
+        if (hour >= 11 && hour < 13) {	//判断是否为中午
+            d= "中午好";
+            b.src="3.jpeg";
+        }
+        if (hour >= 13 && hour < 17) {	//判断是否为下午
+            d = "下午好";
+            b.src="4.jpg";
+        }
+        if (hour >= 17 && hour < 24) {	//判断是否为晚上
+            d = "晚上好";
+            b.src="5.jpeg";
+        }
+        document.write(`${d}`);
+    </script>
+</body>
+
+</html>
