@@ -124,7 +124,45 @@
 	</div>
 
 	<script>
+		let dls=document.querySelectorAll('dl:not(.select)');
+		let selected=document.querySelector('dl.select');
+		for(let i=0;i<dls.length;i++){
+			dls[i].mark=false;
+			showSelect(i);
+		}
+		function showSelect(n){
+			let dds=dls[n].querySelectorAll('dd');
+            let prev=null;
+			let dd=null;
+			for(let j=0;j<dds.length;j++){
+				dds[j].onclick=function(){
+					prev && perv.classList.remove('active');
+					this.classList.add('active');
+					prev=this;
+					let parent=this.parentNode;
+					if(!parent.mark){
+					dd=document.createElement('dd');
+					dd.innerHTML=this.innerHTML;
+					selected.appendChild(dd);
+					parent.mark=true;	
+					}
+					else{
+						dd.innerHTML=this.innerHTML;
+					}
+					let This=this;
+					let span=document.createElement('span');
+					span.innerHTML='X';
+					dd.appendChild(span);
+					span.onclick=function(){
+						selected.removeChild(dd);
+						parent.mark=false;
+						this.className='';
+						This.className='';
 
+					};
+				}
+			}
+		}
 	</script>
 </body>
 <html>
