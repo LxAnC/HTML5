@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <img src="images/ad.jpg" alt="" class="ad">
     <script>
-        let ad = document.querySelector('.ad');
-        setTimeout(function() {
-            ad.style.display = 'none';
-        }, 2000);
+        // 1.获取body 元素
+        let bodyEle = document.body;
+        console.log(bodyEle);
+        console.dir(bodyEle);
+        // 2.获取html 元素
+        // let htmlEle = document.html;
+        let htmlEle = document.documentElement;
+        console.log(htmlEle);
     </script>
 </body>
 

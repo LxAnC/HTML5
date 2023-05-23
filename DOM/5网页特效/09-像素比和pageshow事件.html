@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- <script src="flexible.js"></script> -->
 </head>
 
 <body>
-    <img src="images/ad.jpg" alt="" class="ad">
+
     <script>
-        let ad = document.querySelector('.ad');
-        setTimeout(function() {
-            ad.style.display = 'none';
-        }, 2000);
+        // console.log(window.devicePixelRatio);
+        window.addEventListener('pageshow', function() {
+            alert(11);
+        })
     </script>
+    <a href="http://www.itcast.cn">链接</a>
 </body>
 
 </html>
