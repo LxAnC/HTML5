@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        // 1. 获取元素 
+        let hour = document.querySelector('.hour');
+        let minute = document.querySelector('.minute');
+        let second = document.querySelector('.second');
+        // 2. 开启定时器
+        let inputTime = +new Date('2023-5-29 00:00:00');
+        timer();
+        setInterval(timer, 1000)
+
+        function timer() {
+            let h, m, s;
+            let nowtTime = +new Date();
+            time = inputTime - nowtTime;
+            time /= 1000;
+            h = parseInt(time / 60 / 60);
+            m = parseInt(time % 3600 / 60);
+            s = parseInt(time % 60);
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            console.log(h, m, s);
+            hour.innerHTML = h;
+            minute.innerHTML = m;
+            second.innerHTML = s;
+        };
+    </script>
+</body>
+
+</html
