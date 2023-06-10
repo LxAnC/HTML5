@@ -12,7 +12,6 @@ body {
     background-attachment: scroll;
     background-size: cover;
 }
-
 .na {
     margin-top: 3px;
     margin-left: 1300px;
@@ -250,7 +249,7 @@ body {
 .divs {
     width: 100%;
     position: fixed;
-    backdrop-filter: blur(50px);
+    background-color: #090909;
 }
 
 .logo {
@@ -259,74 +258,6 @@ body {
     width: 50px;
     position: absolute;
 }
-
-.kapian {
-    position: absolute;
-    margin-top: 240px;
-    width: 190px;
-    height: 254px;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-radius: 0.8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.5s;
-    margin-left: 1300px;
-    transform: translate(-50%, -50%);
-}
-
-.kapian:hover {
-    scale: 1.05;
-    rotate: 3deg;
-}
-
-.kapian::after {
-    content: '';
-    width: 93%;
-    height: 95%;
-    position: absolute;
-    border-radius: 0.7em;
-    background-color: rgba(255, 255, 255, 0.1);
-    z-index: 0;
-}
-
-.shadow {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(315deg, #03a9f4, #ff0058);
-    z-index: -1;
-    filter: blur(25px);
-}
-
-.txt {
-    position: absolute;
-    font-weight: 800;
-    font-size: 1.6em;
-    color: #fff;
-}
-
-.kapian:hover .shadow {
-    animation: rotate 3s linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        rotate: 0deg;
-        background: linear-gradient(315deg, #03a9f4, #ff0058);
-    }
-
-    50% {
-        rotate: 180deg;
-        background: linear-gradient(45deg, #ffbc00, #ff0058);
-    }
-
-    100% {
-        rotate: 360deg;
-        background: linear-gradient(315deg, #4dff03, #00d0ff);
-    }
-}
-
 .m {
 
     font-size: 20px;
@@ -344,7 +275,17 @@ body {
 
     text-decoration: none;
 }
-
+.q{
+    
+    position:absolute;
+    background-color:rgb(245, 245, 247);
+    width: 100%;
+    height: 900px;
+}
+.q1{
+    position:absolute;
+    width:100%;
+}
 #pionter {
     width: 20px;
     height: 20px;
@@ -354,26 +295,38 @@ body {
 }
 
 .bigsize {
-    font-size: 80px;
+    font-size: 60px;
     color: #fff;
     position: absolute;
-    left: 30%;
+    left:30%;
     top: 50%;
     text-shadow: 0 2px 2px #090909;
     /*设置文字阴影*/
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     /*设置动画播放次数*/
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
     /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
     user-select: none;
     -webkit-user-seletct: none;
     -moz-user-seletct: none;
     -ms-user-seletct: none;
+    -webkit-animation: flicker 2s infinite;
 }
 
 .p2 {}
+@-webkit-keyframes flicker{                    /*创建动画*/
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 
+}
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -384,3 +337,81 @@ body {
         opacity: 1;
     }
 }
+.te{
+    position:relative;
+    top:50px;
+    margin-left:650px;
+    font-weight:bold;
+    font-size:30px;
+    text-align: center;
+}
+.te1{
+    position:relative;
+    top:50px;
+    margin-left:650px;
+    font-weight:bolder;
+    font-size:40px;
+    text-align: center;
+}
+.te2{
+    position: relative;
+    font-weight:bolder;
+    font-size:16px;
+    display: inline-block;
+}
+/* 三条烂 */
+.ca {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ca .red {
+    background-color: #f43f5e;
+  }
+  
+  .ca .blue {
+    background-color: #3b82f6;
+  }
+  
+  .ca .green {
+    background-color: #22c55e;
+  }
+  
+  .ca.ca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .ca .ca p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .ca .ca p.second-text {
+    font-size: .7em;
+  }
+  
+  .ca .ca:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .ca:hover > .ca:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+  .aim{
+    display: flex;
+    position:absolute;
+    top:160px;
+    left:1500px;
+  }

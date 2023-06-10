@@ -154,48 +154,6 @@
     background-color: black;
 }
 
-.container{
-    position: absolute;
-    height:1500px;
-    width:1400px;
-}
-
-.moon, .sun{
-    font-size: 10rem; /* fontawesome 图标的大小 */
-    width: fit-content; /* 匹配内容宽度 */
-    height: fit-content; /* 匹配内容高度 */
-}
-
-.sun{
-    position: absolute; /* 使用绝对定位和 .sun 重叠 */
-    inset: 0; /* 等同于top:0; bottom:0; left:0; right:0; */
-}
-
-.moon-logo{
-  color: black;
-    opacity: 1;
-    transform: translateY(0) rotateZ(0deg);
-    transition: all 1s ease-out;
-}
-
-.sun-logo{
-  color: black;
-    opacity: 0;
-    transform: translateY(20%) rotateZ(50deg);
-    transition: all 1s ease-out;
-}
-
-.animate-moon{
-    opacity: 0;
-    transform: translateY(20%) rotateZ(50deg);
-    color: #fff;
-}
-
-.animate-sun{
-    opacity: 1;
-    transform: translateY(0) rotateZ(0deg);
-    color: #fff;
-}
 
 .btn {
   border-radius: 31px;
@@ -203,3 +161,195 @@
   height: 62px;
   background-color: #e9e9eb;
 }
+/*动画*/
+.card {
+  width: 190px;
+  height: 300px;
+  transition: all 0.2s;
+  position:relative;
+  margin-left: 300px;
+  margin-top:120px;;
+  cursor: pointer;
+  display: flex;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#b0e633, #53ef7d);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+.box {
+  position: absolute;
+  left:600px;
+  top:150px;
+  width: 200px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 1;
+ }
+ 
+ .box::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+ }
+ 
+ .box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+ }
+ 
+ .box:hover:before,
+ .box:hover:after {
+  transform: skewX(0deg) scaleX(1.3);
+ }
+ 
+ .box:before,
+ .box:after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058)
+ }
+ 
+ .box span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+ }
+ 
+ .box span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+ }
+ 
+ .box span::before {
+  top: -40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+ }
+ 
+ .box span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+ }
+ 
+ .box span:after {
+  bottom: -40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+ }
+ 
+ .box .content {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .box .content h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+ }
