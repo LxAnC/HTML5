@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/c1.css" />
+    <link rel="stylesheet" href="css/c2.css" />
+    <script src="js/loader.js"></script>
+    <title>login</title>
+</head>
+
+<body>
+    
+    <div id="pionter"></div>
+    <div class="divs">
+        <div>
+            <img class="logo" src="img/heart.png">
+            <ul><a href="index.html" class="m">心动APPLE</a></ul>
+            <button class="b">
+                <a href="login1.html" class="a">
+                    点击我登录
+                </a>
+            </button>
+        </div>
+        <div class="na">
+            <ul>
+                <li class="li">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon>
+                        </span>
+
+                        <span class="text">Pr</span>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                        <span class="text">Help</span>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <div class="inde"></div>
+            </ul>
+
+        </div>
+    </div>
+    <div>
+    </div>
+    <div class="p">
+        <div>
+
+        </div>
+        <div class="kapian">
+            <div class="txt">今日文章</div>
+            <div class="shadow"></div>
+
+        </div>
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="moon moon-logo">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="sun sun-logo">
+            <i class="fas fa-sun"></i>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".container").addEventListener("click", () => {
+            document.querySelector(".moon-logo").classList.toggle("animate-moon");
+            document.querySelector(".sun-logo").classList.toggle("animate-sun");
+            document.querySelector("body").classList.toggle("dark");
+        })
+        let list = document.querySelectorAll('.li')
+        function setActiveClass() {
+            list.forEach((item) =>
+                item.classList.remove('act'));
+            this.classList.add('act');
+        }
+        list.forEach((item) =>
+            item.addEventListener('mouseover', setActiveClass))
+
+        window.onload = function () {
+            var pionter = document.querySelector('#pionter');
+            window.onmousemove = function (e) {
+                pionter['style']['left'] = e.clientX + 'px';
+                pionter['style']['top'] = e.clientY + 'px';
+            };
+        };
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+
+</body>
+
+</html>

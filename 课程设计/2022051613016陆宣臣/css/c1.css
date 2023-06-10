@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+html[theme='dark-mode'] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+body {
+    height: 800px;
+    width: 100%;
+    background: #090909;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.na {
+    margin-top: 3px;
+    margin-left: 1300px;
+    position: relative;
+    width: 350px;
+    height: 70px;
+}
+
+.na ul {
+    display: flex;
+}
+
+.na ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.na ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+
+}
+
+.na ul li a .icon {
+    position: relative;
+    line-height: 75px;
+    transition: 0.5s;
+    font-size: 30px;
+}
+
+.na ul li.act a .icon {
+    font-size: 20px;
+    transform: translateY(-6px);
+}
+
+.na ul li a .text {
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    bottom: 20px;
+    font-weight: 400;
+    transition: 0.25s;
+    text-transform: uppercase;
+    transform: scale(0);
+}
+
+.na ul li.act a .text {
+    transform: scale(1);
+}
+
+.inde {
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.na ul li:nth-child(1).act~.inde {
+    background: #f53b57;
+    box-shadow: 0 15px 25px #f53b5799;
+    transform: translateX(calc(70px * 0));
+}
+
+.na ul li:nth-child(2).act~.inde {
+    background: #5d62fd;
+    box-shadow: 0 15px 25px #5d62fd99;
+    transform: translateX(calc(70px * 1));
+}
+
+.na ul li:nth-child(3).act~.inde {
+    background: #05c46b;
+    box-shadow: 0 15px 25px #05c46b99;
+    transform: translateX(calc(70px * 2));
+}
+
+.na ul li:nth-child(4).act~.inde {
+    background: #0fbcf9;
+    box-shadow: 0 15px 25px #0fbcf999;
+    transform: translateX(calc(70px * 3));
+}
+
+.na ul li:nth-child(5).act~.inde {
+    background: #ffa801;
+    box-shadow: 0 15px 25px #ffa80199;
+    transform: translateX(calc(70px * 4));
+}
+
+.b {
+    margin-top: 10px;
+    margin-left: 1150px;
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+.b::before,
+.b::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.b::before {
+    top: -1em;
+    left: -1em;
+}
+
+.b::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.b:hover::before,
+.b:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.b:hover {
+    color: rgb(79, 230, 175);
+}
+
+.b:active {
+    filter: brightness(.8);
+}
+
+.b1 {
+    outline: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 140px;
+    height: 50px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+    overflow: hidden;
+}
+
+.b1 div {
+    transform: translateY(0px);
+    width: 100%;
+}
+
+.b1,
+.b1 div {
+    transition: 0.6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.b1 div span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0.75em 1.125em;
+}
+
+.b1 div:nth-child(1) {
+    background-color: #1e90ff;
+}
+
+.b1 div:nth-child(2) {
+    background-color: #21dc62;
+}
+
+.b1:hover {
+    box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+}
+
+.b1:hover div {
+    transform: translateY(-50px);
+}
+
+.b1 p {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.b1:active {
+    transform: scale(0.95);
+}
+
+.input {
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+}
+
+.p {
+    width: 100%;
+    height: 1900px;
+    background: url("../img/blur1.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.divs {
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(50px);
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+.kapian {
+    position: absolute;
+    margin-top: 240px;
+    width: 190px;
+    height: 254px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 1300px;
+    transform: translate(-50%, -50%);
+}
+
+.kapian:hover {
+    scale: 1.05;
+    rotate: 3deg;
+}
+
+.kapian::after {
+    content: '';
+    width: 93%;
+    height: 95%;
+    position: absolute;
+    border-radius: 0.7em;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+    z-index: -1;
+    filter: blur(25px);
+}
+
+.txt {
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.kapian:hover .shadow {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+        background: linear-gradient(315deg, #03a9f4, #ff0058);
+    }
+
+    50% {
+        rotate: 180deg;
+        background: linear-gradient(45deg, #ffbc00, #ff0058);
+    }
+
+    100% {
+        rotate: 360deg;
+        background: linear-gradient(315deg, #4dff03, #00d0ff);
+    }
+}
+
+.m{
+
+    font-size: 20px;   /*设置文字大小*/
+    color:#fff;  /*设置文字颜色*/
+    text-shadow: 0 5px 5px #090909;  /*设置文字阴影*/                  
+    font-weight: bolder;  /*设置文字宽度*/                               /*设置文字居中*/                              
+    position: absolute;
+    top: 20px;
+    left: 110px;
+
+    text-decoration: none;
+ }
+#pionter {
+    width: 20px;
+    height: 20px;
+    background: #090909;
+    border-radius: 20px;
+    position: absolute;
+}
+  /* The switch - the box around the slider */
+.switch {
+    margin-left:280px;
+    margin-top:20px;
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: absolute;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
