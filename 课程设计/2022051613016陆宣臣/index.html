@@ -13,8 +13,6 @@
 </head>
 
 <body>
-    
-    <div id="pionter"></div>
     <div class="divs">
         <div>
             <img class="logo" src="img/heart.png">
@@ -69,36 +67,20 @@
     <div>
     </div>
     <div class="p">
+        <span class="bigsize">Welcome To CQNU</span>
         <div>
 
         </div>
-        <div class="kapian">
-            <div class="txt">今日文章</div>
-            <div class="shadow"></div>
-
-        </div>
-        <div>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
-        </div>
     </div>
+    <div class="p2">
 
-    <div class="container">
-        <div class="moon moon-logo">
-            <i class="fas fa-moon"></i>
-        </div>
-        <div class="sun sun-logo">
-            <i class="fas fa-sun"></i>
-        </div>
+    <div class="kapian">
+        <div class="txt">今日文章</div>
+        <div class="shadow"></div>
+
     </div>
+</div>
     <script>
-        document.querySelector(".container").addEventListener("click", () => {
-            document.querySelector(".moon-logo").classList.toggle("animate-moon");
-            document.querySelector(".sun-logo").classList.toggle("animate-sun");
-            document.querySelector("body").classList.toggle("dark");
-        })
         let list = document.querySelectorAll('.li')
         function setActiveClass() {
             list.forEach((item) =>

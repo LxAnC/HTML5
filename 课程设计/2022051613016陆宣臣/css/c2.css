@@ -196,3 +196,10 @@
     transform: translateY(0) rotateZ(0deg);
     color: #fff;
 }
+
+.btn {
+  border-radius: 31px;
+  width: 102px;
+  height: 62px;
+  background-color: #e9e9eb;
+}
