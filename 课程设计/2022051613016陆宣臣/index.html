@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="css/loader.css" />
     <link rel="stylesheet" href="css/c1.css" />
     <link rel="stylesheet" href="css/c2.css" />
-    <script src="js/loader.js"></script>
     <title>login</title>
 </head>
 
 <body>
     <div class="divs">
         <div>
-            <img class="logo" src="img/heart.png">
+            <a href="index.html" class="logo"  ><ion-icon name="heart-outline"></ion-icon></a>
             <ul><a href="index.html" class="m">心动APPLE</a></ul>
             <button class="b">
                 <a href="login1.html" class="a">
@@ -77,25 +76,23 @@
         <div>
             <span class="te">请开始你的学习之旅</span>
             <fieldset>
-                <legend>``````````````````````</legend>
+                <legend></legend>
             </fieldset>
-            <span class="te1">以下是收录的精品教程</span>
-            <span class="te1"></span>
+            <span class="te1">请选择你的学习方向</span>
         </div>
         <div class="q1">
-          <div>
              <div>
                 <div class="card">
                     
                     <div class="circle"></div>
                     <div class="circle"></div>
-                    <div class="card-inner"><span class="te2">PhotoShop</br></br></span></div>
+                    <div class="card-inner"><span class="te2">PhotoShop</span></div>
                 
                 </div>
                 <div class="box">
                     <span></span>
                     <div class="content">
-                      <h2 font-color=#0000>C++</h2>
+                      C++
                     </div>
                   </div>
                   <div class="ca3">
@@ -111,18 +108,15 @@
                     </div>
                 </div>
             </div>
-            <div class="c4">
-                <div class="box2">
-                    <span class="title2">GLASS EFFECT</span>
-                    <div>
-                        <strong>JOE WATSON SBF</strong>
-                        <span>VALID</span> <span>01/28</span>
-                    </div>
-                </div>
+            <div class="c4"><span class="">Python</span>
             </div>
             
                   
              </div>
+             <!-- 以上是第一页 -->
+        </div>
+    </div>
+        <div class="page2">
              <div class="aim">
                   <div class="ca">
                     <div class="ca red">
@@ -147,34 +141,12 @@
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-
-    </div>
-        
-            
-    <script>
-        let list = document.querySelectorAll('.li')
-        function setActiveClass() {
-            list.forEach((item) =>
-                item.classList.remove('act'));
-            this.classList.add('act');
-        }
-        list.forEach((item) =>
-            item.addEventListener('mouseover', setActiveClass))
-
-        window.onload = function () {
-            var pionter = document.querySelector('#pionter');
-            window.onmousemove = function (e) {
-                pionter['style']['left'] = e.clientX + 'px';
-                pionter['style']['top'] = e.clientY + 'px';
-            };
-        };
-    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
     </script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
     </script>
+    <script type="text/javascript" src="js/loader.js"></script>
 
 </body>
 
