@@ -12,7 +12,7 @@ body {
     background-size: cover;
 }
 .na {
-    margin-top: 3px;
+    margin-top: 0px;
     margin-left: 1300px;
     position: relative;
     width: 350px;
@@ -245,13 +245,6 @@ body {
     font-weight: bold;
 }
 
-.divs {
-    width: 100%;
-    position: fixed;
-    border-radius: 8px;
-    border: #bebebe 10px;
-}
-
 .logo {
     left:5%;
     top:45%;
@@ -277,24 +270,31 @@ body {
     text-decoration: none;
 }
 .q{
-    
-    position:absolute;
     background-color:rgb(245, 245, 247);
+    position:relative;
     width: 100%;
     height: 900px;
+    z-index: 1;
+}
+.q2{
+    
+    position:relative;
+    width: 100%;
+margin-top: 150px;;
+    z-index: 1;
 }
 .q1{
     position:absolute;
     width:100%;
+    height:300px;
 }
-#pionter {
-    width: 20px;
-    height: 20px;
-    background: #090909;
-    border-radius: 20px;
-    position: absolute;
+.page2{
+    height:900px;
+    width:100%;
+    position:relative;
+    background-color:rgb(245, 245, 247);
+    z-index: 0;
 }
-
 .bigsize {
     font-size: 60px;
     color: #fff;
@@ -350,7 +350,6 @@ body {
     position:relative;
     top:50px;
     margin-left:700px;
-    margin-bottom: 100px;
     font-weight:bolder;
     font-size:40px;
     text-align: center;
@@ -363,9 +362,13 @@ body {
 }
 /* 三条烂 */
 .ca {
+    top:50px;
+    left:500px;
+    height:500px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
   
   .ca .red {
@@ -396,12 +399,11 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 100px;
     width: 250px;
     border-radius: 10px;
     cursor: pointer;
     transition: 400ms;
-    
+    transition-property:all;
   }
   
   .ca .ca p.tip {
@@ -424,11 +426,7 @@ body {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
   }
-  .aim{
-    position:relative;
-    margin-left:30px;
-    margin-top:650px;
-  }
+  
   .ca3{
     display: flex;
     position:absolute;
@@ -450,12 +448,13 @@ body {
     border-radius: 8px;
     cursor: pointer;
   }
-.page2{
-    height:100%;
+
+.sti{
     width:100%;
-    position:absolute;
-    left:0px;
-    top:1300px;
-    background-color:rgb(245, 245, 247);
-    z-index: -50;
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    position: -webkit-sticky;    
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(245,245,247,.72);
 }
