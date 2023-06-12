@@ -4,15 +4,25 @@ let list = document.querySelectorAll('.li')
             list.forEach((item) =>
                 item.classList.remove('act'));
             this.classList.add('act');
+            
         }
-        list.forEach((item) =>
-            item.addEventListener('mouseover', setActiveClass))
+        
 
-        window.onload = function () {
-            var pionter = document.querySelector('#pionter');
-            pionter['style']['left']="20px";
-            window.onmousemove = function (e) {
-                pionter['style']['left'] = e.clientX + 'px';
-                // pionter['style']['top'] = e.clientY + 'px';
-            };
-        };
+        function setNoClass(){
+           
+            this.classList.remove('act');
+            list[0].classList.add('act');
+            
+        }
+        window.onload = function Home(){
+            
+            list.forEach(function(item){ 
+            item.addEventListener('mouseover', setActiveClass);
+            item.addEventListener('mouseleave',setNoClass);
+            })
+            
+            
+        }
+       let nav=document.querySelector('na')
+        
+       
