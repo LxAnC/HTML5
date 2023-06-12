@@ -10,8 +10,9 @@ let list = document.querySelectorAll('.li')
 
         window.onload = function () {
             var pionter = document.querySelector('#pionter');
+            pionter['style']['left']="20px";
             window.onmousemove = function (e) {
                 pionter['style']['left'] = e.clientX + 'px';
-                pionter['style']['top'] = e.clientY + 'px';
+                // pionter['style']['top'] = e.clientY + 'px';
             };
         };
