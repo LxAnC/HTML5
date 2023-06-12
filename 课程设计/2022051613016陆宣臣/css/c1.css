@@ -295,27 +295,8 @@ margin-top: 150px;;
     background-color:rgb(245, 245, 247);
     z-index: 0;
 }
-.bigsize {
-    font-size: 60px;
-    color: #fff;
-    position: absolute;
-    left:30%;
-    top: 50%;
-    text-shadow: 0 2px 2px #090909;
-    /*设置文字阴影*/
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    /*设置动画播放次数*/
-    animation-fill-mode:forwards;
-    /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
-    user-select: none;
-    -webkit-user-seletct: none;
-    -moz-user-seletct: none;
-    -ms-user-seletct: none;
-    -webkit-animation: flicker 2s infinite;
-}
 
-.p2 {}
+
 @-webkit-keyframes flicker{                    /*创建动画*/
     0%{
         opacity: 1;
@@ -363,17 +344,18 @@ margin-top: 150px;;
 /* 三条烂 */
 .ca {
     top:50px;
-    left:500px;
     height:500px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    left: 38.5%;
   }
   
   .ca .red {
     background-color: #f43f5e;  
     box-shadow: 5px 5px 15px rgba(0,0,0,0.25);}
+    
   
   .ca .blue {
     background-color: #3b82f6;
@@ -410,14 +392,7 @@ margin-top: 150px;;
     font-size: 1em;
     font-weight: 700;
     color:#ffffff;
-    margin-top:10px;
-  }
-  
-  .ca .ca p.second-text {
-    font-size: .7em;
-    color:#ffffff;
-  }
-  
+  }  
   .ca .ca:hover {
     transform: scale(1.1, 1.1);
   }
@@ -447,6 +422,7 @@ margin-top: 150px;;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
   }
 
 .sti{
