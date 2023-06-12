@@ -327,9 +327,28 @@ margin-top: 150px;;
     font-size:30px;
     text-align: center;
 }
+.bigsize {
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    left:30%;
+    top: 50%;
+    text-shadow: 0 2px 2px #090909;
+    /*设置文字阴影*/
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    /*设置动画播放次数*/
+    animation-fill-mode:forwards;
+    /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+    user-select: none;
+    -webkit-user-seletct: none;
+    -moz-user-seletct: none;
+    -ms-user-seletct: none;
+    -webkit-animation: flicker 2s infinite;
+}
 .te1{
     position:relative;
-    top:50px;
+    top:100px;
     margin-left:700px;
     font-weight:bolder;
     font-size:40px;
@@ -343,7 +362,7 @@ margin-top: 150px;;
 }
 /* 三条烂 */
 .ca {
-    top:50px;
+    top:120px;
     height:500px;
     position: relative;
     display: flex;
