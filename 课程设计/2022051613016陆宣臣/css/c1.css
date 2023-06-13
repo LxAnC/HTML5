@@ -59,7 +59,7 @@ body {
     font-size: 12px;
     /* color: #fff; */
     bottom: 20px;
-    font-weight: 400;
+    font-weight: 800;
     transition: 0.25s;
     text-transform: uppercase;
     transform: scale(0);
@@ -244,6 +244,11 @@ body {
     color: #090909;
     font-weight: bold;
 }
+.a2 {
+    text-decoration: none;
+    color: #090909;
+    font-weight: bold;
+}
 
 .logo {
     left:5%;
@@ -334,17 +339,14 @@ margin-top: 150px;;
     left:30%;
     top: 50%;
     text-shadow: 0 2px 2px #090909;
-    /*设置文字阴影*/
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    /*设置动画播放次数*/
-    animation-fill-mode:forwards;
-    /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
-    user-select: none;
-    -webkit-user-seletct: none;
-    -moz-user-seletct: none;
-    -ms-user-seletct: none;
-    -webkit-animation: flicker 2s infinite;
+}
+.smallsize{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left:45%;
+    top: 70%;
+    text-shadow: 0 2px 2px #090909;     
 }
 .te1{
     position:relative;
