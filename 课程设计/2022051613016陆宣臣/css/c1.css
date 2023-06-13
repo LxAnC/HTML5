@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    scroll-behavior:smooth;
 }
 .na {
     margin-top: 0px;
@@ -364,13 +365,12 @@ margin-top: 150px;;
 }
 /* 三条烂 */
 .ca {
-    top:120px;
     height:500px;
+    width:100%;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    left: 38.5%;
   }
   
   .ca .red {
@@ -407,6 +407,10 @@ margin-top: 150px;;
     cursor: pointer;
     transition: 400ms;
     transition-property:all;
+    position:relative;
+    left:38.5%;
+    top: 80px;
+
   }
   
   .ca .ca p.tip {
