@@ -3,7 +3,7 @@
   height: 810px;
   width: 220px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
   display: flex;
   position:fixed;
 }
@@ -29,10 +29,10 @@
 .person{
   display: flex; 
   margin-left:250px;   
-  height:900px;
-  width:1600px;
+  height:800px;
+  width:1450px;
 }
-.person .page{
+.person .page:nth-child(1){
   border-radius: 16px;
   background: #e9e8e8;
   height:700px;
@@ -40,11 +40,28 @@
   margin-top:150px;
   width: 1400px;
 }
-.person .page ul li{
+.person .page:nth-child(2),.person .page:nth-child(3){
+  border-radius: 16px;
+  background: #e9e8e8;
+  height:700px;
+  margin-left:20px;
+  margin-top:150px;
+  width: 1400px;
+  display:none;
+}
+.person .page ul li:nth-child(1){
   list-style: none;
   font-weight:bolder;
   font-size:40px;
   margin-top:-65px;
+}
+.person .page ul li:nth-child(2){
+  position:relative;
+  list-style: none;
+  font-weight:bolder;
+  margin-left:20px;
+  margin-top:20px;
+  font-size:10px;
 }
 .jingyan{
   font-weight: bolder;
@@ -172,3 +189,232 @@
     transform: translateY(-0.1em);
   }
 }
+/* 复选框效果 */
+/* Hide the default checkbox */
+.ch1 input,.ch2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+ }
+ 
+ .ch1 {
+  display: block;
+  position: absolute;
+  margin-top:50px;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border: solid #343434;
+  border-radius: 8px;
+  width:26px;
+  left:660px;
+ }
+ 
+ /* Create a custom checkbox */
+ .checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #343434;
+  border-radius: 5px;
+  transition: all 0.5s;
+ }
+ 
+ /* When the checkbox is checked, add a blue background */
+ .ch1 input:checked ~ .checkmark,.ch2 input:checked ~ .checkmark {
+  background-color: #f0f0f0;
+
+ }
+ 
+ /* Create the checkmark/indicator (hidden when not checked) */
+ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  filter: drop-shadow(0 0 10px #888);
+  border: solid #343434;
+ }
+ 
+ /* Show the checkmark when checked */
+ .ch1 input:checked ~ .checkmark:after,.ch2 input:checked ~ .checkmark:after {
+  display: block;
+ }
+ 
+ /* Style the checkmark/indicator */
+ .ch1 .checkmark:after,.ch2 .checkmark:after {
+  left: 0.35em;
+  top: 0.05em;
+  width: 0.3em;
+  height: 0.65em;
+  border: solid #343434;
+  border-width: 0 0.2em 0.2em 0;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  animation: bounceFadeIn 0.5s ;
+ }
+ 
+ @keyframes bounceFadeIn {
+  from {
+   transform: translate(0, -11px) rotate(45deg);
+   opacity: 0;
+  }
+ 
+  to {
+   transform: translate(0, 0) rotate(45deg);
+   opacity: 1;
+   
+  }
+ }
+ /* 个人信息页面的用户名 */
+ .smallin {
+  color:#000;
+  font-weight:bolder;
+  position:absolute;
+  margin-top:40px;
+  left:23%;
+  width: 100%;
+  max-width: 220px;
+  height: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  border: solid lightgrey;
+  outline: none;
+  transition: all 0.3s;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.smallin:hover,.smallin1:hover {
+  /* border: 2px solid lightgrey; */
+  box-shadow: 0px 0px 20px -17px;
+}
+.smallin:active,.smallin1:active {
+  transform: scale(0.95);
+  -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.smallin:focus,.smallin1:focus {
+  border: 2px solid grey;
+}
+.tit{
+  position:absolute;
+  left:340px;
+  top:216px;
+  font-size:40px;
+}
+.tit1{
+  position:absolute;
+  left:340px;
+  top:306px;
+  font-size:40px;
+}
+.smallin1{
+  margin-top:133px;
+  color:#000;
+  font-weight:bolder;
+  position:absolute;
+  left:23%;
+  width: 100%;
+  max-width: 220px;
+  height: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  border: solid lightgrey;
+  outline: none;
+  transition: all 0.3s;
+  box-shadow: 0px 0px 20px -18px;
+}
+.ch2 {
+  display: block;
+  position: absolute;
+  margin-top:140px;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border: solid #343434;
+  border-radius: 8px;
+  width:26px;
+  left:660px;
+ }
+ .heart {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: black;
+ }
+ 
+ .favorite-checkbox {
+  display: none;
+ }
+ 
+ .favorite-checkbox:checked +  .heart svg {
+  fill: hsl(0deg 100% 50%);
+  stroke: hsl(0deg 100% 50%);
+  animation: heartButton 1s;
+ }
+ 
+ @keyframes heartButton {
+  0% {
+   transform: scale(1);
+  }
+ 
+  25% {
+   transform: scale(1.3);
+  }
+ 
+  50% {
+   transform: scale(1);
+  }
+ 
+  75% {
+   transform: scale(1.3);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 
+ .favorite-checkbox + .heart .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+ }
+ 
+ .favorite-checkbox + .heart .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all .5s;
+ }
+ 
+ .favorite-checkbox + .heart .action span.option-1 {
+  transform: translate(0px,0%);
+  opacity: 1;
+ }
+ 
+ .favorite-checkbox:checked + .heart .action span.option-1 {
+  transform: translate(0px,-100%);
+  opacity: 0;
+ }
+ 
+ .favorite-checkbox + .heart .action span.option-2 {
+  transform: translate(0px,100%);
+  opacity: 0;
+ }
+ 
+ .favorite-checkbox:checked + .heart .action span.option-2 {
+  transform: translate(0px,0%);
+  opacity: 1;
+ }

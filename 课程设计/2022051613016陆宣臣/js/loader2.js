@@ -5,8 +5,6 @@ function setActiveClass() {
         item.classList.remove('act'));
     this.classList.add('act');
 }
-
-
 function setNoClass() {
 
     this.classList.remove('act');
