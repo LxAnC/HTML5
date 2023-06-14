@@ -1,0 +1,114 @@
+.FriendList {
+    height: 658px;
+    width: 300px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Connect {
+    position: relative;
+
+    height: 70px;
+    width: 200px;
+    border: 0;
+    cursor: pointer;
+    transition: all 1s;
+    font-weight: bolder;
+}
+
+.Connect:nth-last-child(1) {
+    position: sticky;
+
+    height: 70px;
+    width: 200px;
+    border-radius: 0 0 0 20px;
+    cursor: pointer;
+    transition: all 1000ms;
+    font-weight: bolder;
+}
+
+.Connect:hover {
+    background: rgb(201, 201, 201);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.Connect.focus {
+    background: rgb(201, 201, 201);
+    box-shadow: -1px 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 帮忙的下拉菜单 */
+.putMenu {
+    position: relative;
+    left: -20%;
+    top: -230px;
+    height: 150px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.putMenu p {
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 10px;
+    /* bottom:20px; */
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000;
+    cursor: pointer;
+    top: 20px;
+}
+
+.na ul li.act:hover .putMenu {
+    animation: hideIndex 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes hideIndex {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(230px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 我的文件 */
+.files {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 0px;
+    height: 600px;
+    width: 1300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 50;
+    border:1px #fff;
+}
+
+.fileslist {
+    width: 100%;
+    border: 10px #fff;
+    position: relative;
+    top:20px;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}

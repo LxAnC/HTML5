@@ -1,4 +1,17 @@
+body{
+  margin:0;
+  padding:0;
+}
+.login1{
+  position:absolute;
+  left:50%;
+  top:10%;
+
+}
 .login-box {
+  display: none;
+  background-image: url(/img/Mountain.jpeg);
+  background-size: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,7 +22,7 @@
     backdrop-filter: blur(50px);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+    border-radius: 20px;
   }
   
   .login-box p:first-child {
@@ -176,4 +189,98 @@
     background: transparent;
     color: #aaa;
     border-radius: 5px;
+  }
+  .loaded {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70.4px;
+    height: 70.4px;
+    --clr: rgb(247, 197, 159);
+    --clr-alpha: rgb(247, 197, 159, .1);
+    animation: loaded 1.6s infinite ease;
+    transform-style: preserve-3d;
+    z-index: 99999;
+    display: none;
+  }
+  
+  .loaded>div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 3.5px solid var(--clr);
+  }
+  
+  .loaded div:nth-of-type(1) {
+    transform: translateZ(-35.2px) rotateY(180deg);
+  }
+  
+  .loaded div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+  }
+  
+  .loaded div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+  }
+  
+  .loaded div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+  }
+  
+  .loaded div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+  }
+  
+  .loaded div:nth-of-type(6) {
+    transform: translateZ(35.2px);
+  }
+  
+  @keyframes loaded {
+    0% {
+      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+  
+    50% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+  
+    100% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+  }
+  .b {
+    height:50px;
+    width:500px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #000;
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    border: 1px solid #000;
+    transition: 5s;
+    user-select: none;
+  }
+  
+  .b:hover + .login-box,.login1,.login-box:hover {
+    display: block;
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff,
+                0 0 20px #008cff,
+                0 0 50px #008cff,
+                0 0 100px #008cff;
+    
   }

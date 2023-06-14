@@ -4,14 +4,15 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-body {
+body::-webkit-scrollbar {
+    display: none;
+  } 
+  body{
     height: 800px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    scroll-behavior:smooth;
+    -ms-overflow-style: none;
 }
+
 .na {
     margin-top: 0px;
     margin-left: 1300px;
@@ -31,7 +32,6 @@ body {
     height: 70px;
     z-index: 1;
 }
-
 .na ul li a {
     position: relative;
     display: flex;
@@ -101,6 +101,7 @@ body {
     background: #0fbcf9;
     box-shadow: 0 15px 25px #0fbcf999;
     transform: translateX(calc(70px * 3));
+    overflow:hidden;
 }
 
 .na ul li:nth-child(5).act~.inde {
@@ -286,7 +287,6 @@ body {
     /*设置文字大小*/
     color: #090909;
     /*设置文字颜色*/
-    text-shadow: 0 5px 5px #090909;
     /*设置文字阴影*/
     font-weight: bolder;
     /*设置文字宽度*/
@@ -354,6 +354,31 @@ margin-top: 150px;;
     font-weight:bold;
     font-size:30px;
     text-align: center;
+}
+.messagetit{
+    position:absolute;
+    top:30px;
+    margin-left:580px;
+    font-weight:bold;
+    font-size:30px;
+    text-align: center;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    /* animation-delay: 500ms; */
+}
+.messagetit.change1{
+    animation-name: change1;
+}
+@keyframes change1 {
+    0%{
+        transform:translateY(-0px);
+    }
+    50%{
+        transform:translateY(-360px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
 }
 .bigsize {
     font-size: 60px;
@@ -492,9 +517,9 @@ margin-top: 150px;;
 .inputGroup {
     font-family: 'Segoe UI', sans-serif;
     margin: 1em 0 1em 0;
-    max-width: 190px;
+    max-width: 250px;
     position: absolute;
-    left:25%;
+    left:22%;
     top:88.5%;
   }
   
@@ -505,7 +530,7 @@ margin-top: 150px;;
     border: 2px solid rgb(200, 200, 200);
     background-color: transparent;
     border-radius: 20px;
-    width: 800px;
+    width: 845px;
   }
   
   .inputGroup label {

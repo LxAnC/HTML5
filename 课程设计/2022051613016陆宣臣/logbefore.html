@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/c1.css" />
     <link rel="stylesheet" href="css/c2.css" />
     <link rel="stylesheet" href="css/c3.css" />
+    <link rel="stylesheet" href="css/c4.css" />
+    <link rel="stylesheet" href="css/c5.css" />
     <title>login</title>
 </head>
 
@@ -26,6 +28,14 @@
                         </span>
                         <span class="text">Home</span>
                     </a>
+                    <div class="putMenu">
+
+                        <p>隐私</p>
+                        <p>安全</p>
+                        <p>帮助</p>
+                        <p>反馈</p>
+
+                    </div>
                 </li>
                 <li class="li act">
                     <a href="logbefore.html">
@@ -34,24 +44,56 @@
 
                         <span class="text">Pr</span>
                     </a>
+                    <div class="putMenu">
+
+                        <p>隐私</p>
+                        <p>安全</p>
+                        <p>帮助</p>
+                        <p>反馈</p>
+
+                    </div>
                 </li>
                 <li class="li">
                     <a href="Chat.html">
                         <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
                         <span class="text">Message</span>
                     </a>
+                    <div class="putMenu">
+
+                        <p>隐私</p>
+                        <p>安全</p>
+                        <p>帮助</p>
+                        <p>反馈</p>
+
+                    </div>
                 </li>
                 <li class="li">
-                    <a href="#">
+                    <a href="help.html">
                         <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
                         <span class="text">Help</span>
                     </a>
+                    <div class="putMenu">
+
+                        <p>隐私</p>
+                        <p>安全</p>
+                        <p>帮助</p>
+                        <p>反馈</p>
+
+                    </div>
                 </li>
                 <li class="li">
                     <a href="#">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="text">Home</span>
                     </a>
+                    <div class="putMenu">
+
+                        <p>隐私</p>
+                        <p>安全</p>
+                        <p>帮助</p>
+                        <p>反馈</p>
+
+                    </div>
                 </li>
                 <div class="inde"></div>
             </ul>
@@ -66,7 +108,7 @@
             <button class="pr">我的喜欢</button>
             <button class="pr">我的会员</button>
             <button class="pr">我的课程</button>
-            <button class="pr">学习记录</button>
+            <button class="pr">空间留言</button>
             <button class="pr">心得笔记</button>
         </div>
     </div>
@@ -84,18 +126,68 @@
                     <input checked="checked" type="checkbox">
                     <div class="checkmark"></div>
                 </label>
-                <input value="LxAnC" type="text" name="text" class="smallin">
+                <input value="LxAnC" type="text" name="text" class="smallish">
+                <input value="Change Your Username" type="button" name="text" class="btnsmallish">
+                <input value="Change Your Password" type="button" name="text" class="btnsmallish">
+                <check></check>
                 <div class="tit1"><ion-icon name="mail-outline"></ion-icon></div>
-                <input value="5001363@qq.com" type="text" name="text" class="smallin1">
+                <input value="5001363@qq.com" type="text" name="text" class="smallish1">
                 <label class="ch2">
                     <input checked="checked" type="checkbox">
                     <div class="checkmark"></div>
                 </label>
+                <div class="titedit" contenteditable="true">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                    <textarea placeholder="您还没有填写呢" type="textarea" name="text" class="smallishedit"></textarea>
+                </div>
+
             </ul>
         </div>
         <div class="page">
             <ul>
                 <li>我的文件
+                </li>
+                <li class="s">资源文件</li>
+                <div class="files">
+                    <a hred="#"><div class="fileslist">C++IT0基础编程技术专业教材</a></div>
+                    <div class="fileslist"> Mysql大数据分析实操课程ppt.zip</div>
+                    <div class="fileslist"> C++IT0基础编程技术专业教材.rar</div>
+                    <div class="fileslist"> C++IT0基础编程技术专业教材.zip</div>
+                    <div class="fileslist"> C++IT0基础编程技术专业教材.7z</div>
+                    <div class="fileslist"> C++IT0基础编程技术专业教材.rar</div>
+                </div>
+
+            </ul>
+        </div>
+        <div class="page">
+            <ul>
+                <li>我的喜欢
+                </li>
+                <div class="things">
+                    <div></div>
+
+                </div>
+                <input type="checkbox" checked="checked" id="favorite" class="favorite-checkbox"
+                    value="favorite-button">
+                <label for="favorite" class="heart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-heart">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    <div class="action">
+                        <span class="option-1">加入喜欢</span>
+                        <span class="option-2">已加入</span>
+                    </div>
+                </label>
+
+            </ul>
+        </div>
+        <div class="page">
+            <ul>
+                <li>我的会员
                 </li>
                 <li class="s">资源文件</li>
                 <div class="tit">
@@ -106,9 +198,9 @@
                     <input checked="checked" type="checkbox">
                     <div class="checkmark"></div>
                 </label>
-                <input value="LxAnC" type="text" name="text" class="smallin">
+                <input value="LxAnC" type="text" name="text" class="smallish">
                 <div class="tit1"><ion-icon name="mail-outline"></ion-icon></div>
-                <input value="5001363@qq.com" type="text" name="text" class="smallin1">
+                <input value="5001363@qq.com" type="text" name="text" class="smallish1">
                 <label class="ch2">
                     <input checked="checked" type="checkbox">
                     <div class="checkmark"></div>
@@ -117,26 +209,71 @@
         </div>
         <div class="page">
             <ul>
-                <li>我的喜欢
+                <li>我的课程
                 </li>
-
-                <input type="checkbox" checked="checked" id="favorite" class="favorite-checkbox" value="favorite-button">
-                <label for="favorite" class="heart">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-heart">
-                        <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                        </path>
-                    </svg>
-                    <div class="action">
-                        <span class="option-1">Add to Favorites</span>
-                        <span class="option-2">Added to Favorites</span>
-                    </div>
+                <li class="s">资源文件</li>
+                <div class="tit">
+                    <ion-icon name="person-circle-outline">
+                    </ion-icon>
+                </div>
+                <label class="ch1">
+                    <input checked="checked" type="checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <input value="LxAnC" type="text" name="text" class="smallish">
+                <div class="tit1"><ion-icon name="mail-outline"></ion-icon></div>
+                <input value="5001363@qq.com" type="text" name="text" class="smallish1">
+                <label class="ch2">
+                    <input checked="checked" type="checkbox">
+                    <div class="checkmark"></div>
                 </label>
             </ul>
         </div>
+        <div class="page">
+            <ul>
+                <li>空间留言
+                </li>
+                <li class="s">貌似有很多给你留言的人……</li>
+                <!-- <input placeholder="快来留言吧……" type="text" name="text" class="smallish2"> -->
+                <div class="leave-message">
+                    <h1>留言板</h1>
+                    <form id="message-form">
+                        <label for="name">姓名：</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="message">留言：</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit">提交</button>
+                    </form>
+                    <div id="messages"></div>
+                </div>
+
+            </ul>
+        </div>
     </div>
+    <script>
+        const form = document.querySelector('#message-form');
+        const messagesList = document.querySelector('#messages');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = form.querySelector('#name');
+            const messageInput = form.querySelector('#message');
+            const name = nameInput.value;
+            const message = messageInput.value;
+            if (name === '' || message === '') {
+                alert('请输入姓名和留言');
+                return;
+            }
+            const messageItem = document.createElement('div');
+            messageItem.classList.add('message-item');
+            messageItem.innerHTML = `
+		<h3>${name}</h3>
+		<p>${message}</p>
+	`;
+            messagesList.appendChild(messageItem);
+            nameInput.value = '';
+            messageInput.value = '';
+        });
+    </script>
     <script type="text/javascript" src="js/120.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
     </script>
