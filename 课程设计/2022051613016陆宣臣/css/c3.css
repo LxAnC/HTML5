@@ -319,6 +319,14 @@ backface-visibility: hidden;
   top:216px;
   font-size:40px;
 }
+/* 聊天界面图标 */
+.connectit{
+  position:relative;
+  margin-left:70px;
+  margin-top:20px;
+  font-size:40px;
+  color:rgb(0, 147, 245);
+}
 .tit1{
   position:absolute;
   left:340px;

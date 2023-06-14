@@ -11,3 +11,14 @@ for (let s = 0; s < prs.length; s++) {
         pages[s].style.display = "block";
     }
 }
+
+
+let send=document.querySelector('.send');
+send.addEventListener('click',function (){
+    let textv=document.querySelector('input[type="text"]');
+    console.log(textv);
+    const outputBox = document.querySelector(".outputGroup");
+    outputBox.innerHTML = inputBox.value;
+})
+
+// 
