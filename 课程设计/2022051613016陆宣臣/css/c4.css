@@ -1,7 +1,7 @@
 .FriendList {
     height: 658px;
     width: 300px;
-    margin-top: 20px;
+    margin-top: 92px;
     display: flex;
     flex-direction: column;
 }
@@ -69,7 +69,7 @@
 
 .na ul li.act:hover .putMenu {
     animation: hideIndex 1s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards   ;
 }
 
 @keyframes hideIndex {
@@ -77,12 +77,8 @@
         transform: translateY(0);
     }
 
-    50% {
-        transform: translateY(230px);
-    }
-
     100% {
-        transform: translateY(0);
+        transform: translateY(230px);
     }
 }
 
@@ -111,4 +107,55 @@
     font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
+}
+.thing{
+    display: flex;
+    position: relative;
+    margin-left:10px;
+    height:100px;
+    width:70px;
+}
+.pic{
+    margin-left:20px;
+    margin-top:50px;
+    border-radius: 20px;
+    background-size: cover;
+    height:200px;    
+    transition: 0.5s;
+}
+.pic:hover{
+    transform: scale(0.95);
+    cursor:pointer
+}
+.chatbox{
+    display: none;
+    position:relative;
+    height:80%;
+    width:100%;
+    display: flex;
+    flex-direction:column-reverse;
+    text-align: right;
+    margin-right:100px;
+    margin-bottom: 160px;
+    gap:20px;
+    /* overflow-y: auto; */
+}
+.Chatspar{
+    border-radius: 20px;
+
+    color:#000000;
+    font-weight: bolder;
+    transition: all 0.5s;
+   left:90%;
+   position:relative;
+   display: flex;
+   width:500px;
+   transform:translate(50,50);
+}
+.Chatspar p{
+    background:#f90303;
+    position: relative;
+    right:0;
+    text-align: right;
+    max-width:65px;
 }

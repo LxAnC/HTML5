@@ -1,45 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css" />
-    <title>Document</title>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="login1">
-  <button class="b"></button>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" id="login-btn">Login</button>
+    </form>
+    <p id="error-msg"></p>
+    <p id="countdown-timer"></p>
   </div>
-    <div class="login-box">
-        <p>Login</p>
-        <form>
-          <div class="user-box">
-            <input required="" name="" type="text">
-            <label>Email/Name</label>
-          </div>
-          <div class="user-box">
-            <input required="" name="" type="password">
-            <label>Password</label>
-          </div>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
-        <p>Don't have an account? <a href="" class="a2">Sign up!</a></p>
-      </div>
-      <div class="loaded">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <script type="text/javascript" src="js/loading.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

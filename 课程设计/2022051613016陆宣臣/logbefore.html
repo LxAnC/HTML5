@@ -30,10 +30,9 @@
                     </a>
                     <div class="putMenu">
 
-                        <p>隐私</p>
-                        <p>安全</p>
-                        <p>帮助</p>
-                        <p>反馈</p>
+                        <p>主页</p>
+                        <p>方向</p>
+                        <p>视频</p>
 
                     </div>
                 </li>
@@ -151,8 +150,8 @@
                 <div class="files">
                     <a hred="#"><div class="fileslist">C++IT0基础编程技术专业教材</a></div>
                     <div class="fileslist"> Mysql大数据分析实操课程ppt.zip</div>
-                    <div class="fileslist"> C++IT0基础编程技术专业教材.rar</div>
-                    <div class="fileslist"> C++IT0基础编程技术专业教材.zip</div>
+                    <div class="fileslist"> spar数据分析入门教学.rar</div>
+                    <div class="fileslist"> Python程序设计基础.zip</div>
                     <div class="fileslist"> C++IT0基础编程技术专业教材.7z</div>
                     <div class="fileslist"> C++IT0基础编程技术专业教材.rar</div>
                 </div>
@@ -160,13 +159,15 @@
             </ul>
         </div>
         <div class="page">
+            
             <ul>
                 <li>我的喜欢
                 </li>
+                <div ><img class="pic" src="/img/蓝桥.jpeg  "></div>
                 <div class="things">
-                    <div></div>
 
-                </div>
+
+                
                 <input type="checkbox" checked="checked" id="favorite" class="favorite-checkbox"
                     value="favorite-button">
                 <label for="favorite" class="heart">
@@ -182,7 +183,7 @@
                         <span class="option-2">已加入</span>
                     </div>
                 </label>
-
+</div>
             </ul>
         </div>
         <div class="page">
@@ -253,6 +254,7 @@
     <script>
         const form = document.querySelector('#message-form');
         const messagesList = document.querySelector('#messages');
+        const drop="delete";
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const nameInput = form.querySelector('#name');
@@ -266,13 +268,22 @@
             const messageItem = document.createElement('div');
             messageItem.classList.add('message-item');
             messageItem.innerHTML = `
-		<h3>${name}</h3>
-		<p>${message}</p>
+		    <h3>${name}</h3>
+		    <p>${message}</p><button class="sd">${drop}</button>
+        
 	`;
             messagesList.appendChild(messageItem);
+            alert("留言成功");
             nameInput.value = '';
             messageInput.value = '';
-        });
+
+            let del=messageItem.querySelector('.sd');
+            del.onclick=function(){
+                messagesList. removeChild(messageItem);
+        }
+        }
+        );
+        
     </script>
     <script type="text/javascript" src="js/120.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">

@@ -1,10 +1,18 @@
 .leave-message {
 	max-width: 500px;
-	margin: 0 auto;
+	margin-left:80px;
 	padding: 20px;
 	border-radius: 20px;
 }
-
+.sd{
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.25);; */
+    margin-left:200px;
+    height:60x;
+    cursor:pointer;
+    position:relative;
+    display: flex;
+}
 h1 {
 
 	margin-bottom: 30px;
@@ -36,5 +44,39 @@ form button {
 }
 
 #messages {
-	margin-top: 30px;
+	display: flex;
+}
+*{
+    /* 初始化 取消内外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 倒计时 */
+.Countdown {
+    position: sticky;
+    top: 1000px;
+    margin-left: 1200px;
+    z-index: 50;
+}
+
+.Countdown span {
+    position: relative;
+    top: -15px;
+    color:#fff;
+}
+
+.Countdown div {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: #baccd9;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;;
+    font-weight: 600;
+    font-size: 24px;
+    position: relative;
+    top: -12px;
 }
