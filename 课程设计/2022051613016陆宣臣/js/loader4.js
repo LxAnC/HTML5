@@ -1,7 +1,7 @@
 let list = document.querySelectorAll('.li');
 let menu = document.querySelectorAll('.putMenu');
-console.log(list);
-console.log(menu);
+// console.log(list);
+// console.log(menu);
 function setActiveClass() {
     list.forEach((item) =>
         item.classList.remove('act'));

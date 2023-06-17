@@ -1,13 +1,11 @@
 let list = document.querySelectorAll('.li')
-
         function setActiveClass() {
             list.forEach((item) =>
-                item.classList.remove('act'));
+                item.classList.remove('act'))
             this.classList.add('act');
             
         }
-        
-
+        // list[0].preventDefault();   
         function setNoClass(){
            
             this.classList.remove('act');

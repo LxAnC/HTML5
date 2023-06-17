@@ -251,7 +251,7 @@ body::-webkit-scrollbar {
 
 .logo {
     left:5%;
-    top:45%;
+    top:36%;
     width:100%;
     position: absolute;
     color:#090909;
@@ -359,8 +359,8 @@ margin-top: 150px;;
     font-size: 60px;
     color: #fff;
     position: absolute;
-    left:30%;
-    top: 50%;
+    left:37%;
+    top: 15%;
     text-shadow: 0 2px 2px #090909;
 }
 .smallsize{
@@ -368,7 +368,7 @@ margin-top: 150px;;
     color: #fff;
     position: absolute;
     left:45%;
-    top: 70%;
+    top: 25%;
     text-shadow: 0 2px 2px #090909;     
 }
 .te1{

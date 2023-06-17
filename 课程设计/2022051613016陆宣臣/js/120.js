@@ -16,8 +16,7 @@ for (let s = 0; s < prs.length; s++) {
 let hour = document.querySelector("#h");
 let minute = document.querySelector("#m");
 let second = document.querySelector("#s");
-// 获取用户输入的日期
-let inputTime = 86400; // 添加 ‘+’ 是将时间转为毫秒形式  时间可以自行填写
+let inputTime = 86400; 
 countDown() // 先调用一次这个函数，防止第一次刷新页面有空白
 setInterval(countDown, 1000)
 // 倒计时函数思路
@@ -43,20 +42,20 @@ function countDown() {
     s = s < 10 ? "0" + s : s;
     second.innerHTML = s;
 }
-// 创建一个外层容器
-var lb = document.createElement("div");
+// 创建一个div
+let lb = document.createElement("div");
 lb.classList.add("lb");
 document.body.appendChild(lb);
 // 创建一个卡片容器
-var lb1 = document.createElement("div");
+let lb1 = document.createElement("div");
 lb1.classList.add("lb1");
 lb.appendChild(lb1);
 // 循环创建三张图片卡片
-for (var i = 0; i < 3; i++) {
-  var lbc = document.createElement("div");
+for (let i = 0; i < 3; i++) {
+  let lbc = document.createElement("div");
   lbc.classList.add("lbc");
-  var img = document.createElement("img");
-  img.src = "card" + (i + 1) + ".jpg";
+  let img = document.createElement("img");
+  // img.src = "card" + (i + 1) + ".jpg";
   lbc.appendChild(img);
   lb1.appendChild(lbc);
 }
@@ -79,11 +78,11 @@ let keyframes = `@keyframes cardRotate
 `;
 
 // 创建一个style元素，将CSS样式和动画添加到其中
-var style = document.createElement("style");
-style.type = "text/css";
+let style = document.createElement("style");
+// style.type= "text/css";
 style.innerHTML = `
   .lb{
-    height: 100vh;
+    height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,6 +120,17 @@ style.innerHTML = `
     width: 100%;
     height: 100%;
   }
+  .leftbutton,.rightbutton{
+    position:absolute;
+    left:20%;
+    top:50%;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+  }
+  .rightbutton{
+    left:80%;
+  }
   .lbc:nth-child(1){
     transform: rotateY(0) translateZ(700px);
   }
@@ -133,3 +143,11 @@ style.innerHTML = `
   ${keyframes}
 `;
 document.head.appendChild(style);
+let left=document.querySelector('.leftbutton');
+let right=document.querySelector('.rightbutton');
+left.onclick=function(){
+    left.classList.add('act');
+}
+right.onclick=function(){
+  right.classList.add('act');
+}
